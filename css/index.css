@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+nav {
+  background-color: white;
+}
+
+nav .navbar-brand {
+  color: #5abf28;
+  font-weight: 400;
+  font-family: 'Lobster';
+  font-size: 25px;
+}
+
+nav .navbar-brand img {
+  fill: #5abf28;
+  color: #5abf28;
+}
+
+nav .collapse .links .nav-item {
+  color: #5abf28;
+}
+
+nav .collapse .links .nav-item .nav-link {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  color: #969696;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+nav .collapse .links .nav-item .nav-link:hover {
+  color: #5abf28;
+}
+
+nav .collapse .social li {
+  margin: 11px;
+  border-radius: 100%;
+  border: 2px solid;
+  border-color: #e6e6e6;
+  width: 41px;
+  height: 41px;
+}
+
+nav .collapse .social li .nav-link {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #969696;
+  fill: #969696;
+  font-size: 14px;
+}
+
+nav .collapse .social li:hover {
+  border-color: #5abf28;
+  background-color: #5abf28;
+}
+
+nav .collapse .social li:hover * {
+  fill: #ffffff;
+}
+
+.landingDiv {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url("../static/planting.png");
+  background-repeat: no-repeat;
+}
+
+.landingDiv .landingImg {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landingDiv .landingImg .titles {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+.landingDiv .landingImg .titles h1 {
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Lobster";
+  text-align: center;
+}
+
+.landingDiv .landingImg .titles h3 {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Montserrat";
+}
+/*# sourceMappingURL=index.css.map */

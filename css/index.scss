@@ -1,0 +1,117 @@
+$pistach : #5abf28;
+$navbargrey:#969696;
+
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+nav {
+    background-color: white;
+
+    .navbar-brand {
+        color: $pistach;
+        font-weight: 400;
+        font-family: 'Lobster';
+        font-size: 25px;
+
+        img {
+            fill: #5abf28;
+            color: #5abf28;
+
+        }
+    }
+
+    .collapse {
+        .links {
+            .nav-item {
+                color: $pistach;
+
+                .nav-link {
+                    font-family: Montserrat;
+                    text-transform: uppercase;
+                    color: $navbargrey;
+                    font-size: 16px;
+                    font-weight: 300;
+
+                    &:hover {
+                        color: $pistach;
+
+                    }
+                }
+            }
+        }
+
+        .social {
+            li {
+
+                margin: 11px;
+                border-radius: 100%;
+                border: 2px solid;
+                border-color: #e6e6e6;
+                width: 41px;
+                height: 41px;
+
+                .nav-link {
+                    text-align: center;
+                    justify-content: center;
+                    color: $navbargrey;
+                    fill: $navbargrey;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    border-color: $pistach;
+                    background-color: $pistach;
+
+                    * {
+                        fill: #ffffff;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.landingDiv {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../static/planting.png');
+    background-repeat: no-repeat;
+
+    .landingImg {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .titles {
+            display: grid;
+            text-align: center;
+
+            h1 {
+                font-size: 80px;
+                color: #ffffff;
+                font-weight: 400;
+                font-family: "Lobster";
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 30px;
+                color: #ffffff;
+                font-weight: 300;
+                font-family: "Montserrat";
+            }
+        }
+    }
+}
