@@ -11,6 +11,7 @@ $navbargrey:#969696;
     src: url(../fonts/Montserrat-Regular.ttf);
 }
 
+
 nav {
     background-color: white;
 
@@ -21,8 +22,8 @@ nav {
         font-size: 25px;
 
         img {
-            fill: #5abf28;
-            color: #5abf28;
+            fill: $pistach;
+            color: $pistach;
 
         }
     }
@@ -86,6 +87,9 @@ nav {
     background-size: cover;
     background-image: url('../static/planting.png');
     background-repeat: no-repeat;
+    background-position: center;
+
+
 
     .landingImg {
         height: 100vh;

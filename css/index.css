@@ -74,6 +74,7 @@ nav .collapse .social li:hover * {
   background-size: cover;
   background-image: url("../static/planting.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .landingDiv .landingImg {
