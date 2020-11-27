@@ -8,64 +8,36 @@
   src: url(../fonts/Montserrat-Regular.ttf);
 }
 
-nav {
+.open {
+  visibility: visible !important;
+}
+
+.mask {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .8;
+  z-index: 5;
+}
+
+.zoomed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  visibility: hidden;
+  width: 800px;
+  height: 500px;
   background-color: white;
-}
-
-nav .navbar-brand {
-  color: #5abf28;
-  font-weight: 400;
-  font-family: 'Lobster';
-  font-size: 25px;
-}
-
-nav .navbar-brand img {
-  fill: #5abf28;
-  color: #5abf28;
-}
-
-nav .collapse .links .nav-item {
-  color: #5abf28;
-}
-
-nav .collapse .links .nav-item .nav-link {
-  font-family: Montserrat;
-  text-transform: uppercase;
-  color: #969696;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-nav .collapse .links .nav-item .nav-link:hover {
-  color: #5abf28;
-}
-
-nav .collapse .social li {
-  margin: 11px;
-  border-radius: 100%;
-  border: 2px solid;
-  border-color: #e6e6e6;
-  width: 41px;
-  height: 41px;
-}
-
-nav .collapse .social li .nav-link {
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #969696;
-  fill: #969696;
-  font-size: 14px;
-}
-
-nav .collapse .social li:hover {
-  border-color: #5abf28;
-  background-color: #5abf28;
-}
-
-nav .collapse .social li:hover * {
-  fill: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 6;
 }
 
 .landingDiv {
@@ -75,6 +47,16 @@ nav .collapse .social li:hover * {
   background-image: url("../static/planting.png");
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+
+.landingDiv .landingMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  opacity: .1;
 }
 
 .landingDiv .landingImg {
@@ -92,6 +74,7 @@ nav .collapse .social li:hover * {
 }
 
 .landingDiv .landingImg .titles {
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   text-align: center;
@@ -105,10 +88,299 @@ nav .collapse .social li:hover * {
   text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+  .landingDiv .landingImg .titles h1 {
+    font-size: 40px;
+  }
+}
+
 .landingDiv .landingImg .titles h3 {
   font-size: 30px;
   color: #ffffff;
   font-weight: 300;
   font-family: "Montserrat";
+}
+
+@media screen and (max-width: 900px) {
+  .landingDiv .landingImg .titles h3 {
+    font-size: 15px;
+  }
+}
+
+.secondDiv {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.secondDiv .secondDiv_img img {
+  min-width: 250px;
+  max-width: 100%;
+}
+
+.secondDiv .secondDiv_txt h1 {
+  font-size: 70px;
+  color: #5abf28;
+  font-weight: 400;
+  font-family: "Lobster";
+  padding: 50px;
+}
+
+@media screen and (max-width: 620px) {
+  .secondDiv .secondDiv_txt h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
+.secondDiv .secondDiv_txt p {
+  width: 100%;
+  height: 197px;
+}
+
+.secondDiv .secondDiv_txt p::-webkit-scrollbar {
+  width: 4px;
+}
+
+.secondDiv .secondDiv_txt p::-webkit-scrollbar-track {
+  background: #ebebeb;
+}
+
+.secondDiv .secondDiv_txt p::-webkit-scrollbar-thumb {
+  background-color: #5abf28;
+}
+
+.thirdDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.thirdDiv .backgroundimg {
+  position: absolute;
+  z-index: -1;
+  opacity: .2;
+  width: 100%;
+  height: 100%;
+}
+
+.thirdDiv h1 {
+  font-size: 70px;
+  color: #5abf28;
+  font-weight: 400;
+  font-family: "Lobster";
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 124px;
+}
+
+@media screen and (max-width: 900px) {
+  .thirdDiv h1 {
+    font-size: 40px;
+  }
+}
+
+.thirdDiv .pics_thirdDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.thirdDiv .pics_thirdDiv .first {
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.thirdDiv .pics_thirdDiv .first h4 {
+  font-size: 24px;
+  color: #636363;
+  font-weight: 300;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding: 55px;
+}
+
+.thirdDiv .pics_thirdDiv .first button {
+  border-radius: 100%;
+  border: 2px solid #b4b4b4;
+  width: 50px;
+  height: 50px;
+  color: #b4b4b4;
+  background-color: transparent;
+}
+
+.thirdDiv .pics_thirdDiv .first:hover {
+  cursor: pointer;
+}
+
+.thirdDiv .pics_thirdDiv .first:hover h4 {
+  color: #5abf28;
+}
+
+.thirdDiv .pics_thirdDiv .first:hover button {
+  color: #5abf28;
+  border-color: #5abf28;
+}
+
+.thirdDiv .pics_thirdDiv .second {
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.thirdDiv .pics_thirdDiv .second h4 {
+  font-size: 24px;
+  color: #636363;
+  font-weight: 300;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding: 55px;
+}
+
+.thirdDiv .pics_thirdDiv .second button {
+  border-radius: 100%;
+  border: 2px solid #b4b4b4;
+  width: 50px;
+  height: 50px;
+  color: #b4b4b4;
+  background-color: transparent;
+}
+
+.thirdDiv .pics_thirdDiv .second:hover {
+  cursor: pointer;
+}
+
+.thirdDiv .pics_thirdDiv .second:hover h4 {
+  color: #5abf28;
+}
+
+.thirdDiv .pics_thirdDiv .second:hover button {
+  color: #5abf28;
+  border-color: #5abf28;
+}
+
+.fourthDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.fourthDiv h1 {
+  font-size: 70px;
+  color: #5abf28;
+  font-weight: 400;
+  font-family: "Lobster";
+  text-align: center;
+  padding: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .fourthDiv h1 {
+    font-size: 40px;
+  }
+}
+
+.fourthDiv .fourthRecsFirst {
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+.fourthDiv .fourthRecsFirst .rec {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 406px;
+  position: relative;
+  cursor: pointer;
+}
+
+.fourthDiv .fourthRecsFirst .rec .zoomIn {
+  width: 100%;
+  height: 406px;
+  position: absolute;
+  background-color: #5abf28;
+  visibility: hidden;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: .8;
+}
+
+.fourthDiv .fourthRecsFirst .rec .zoomIn img {
+  margin: auto;
+  width: 65px;
+  height: 65px;
+}
+
+.fourthDiv .fourthRecsFirst .rec img {
+  width: 100%;
+  height: 406px;
+  position: absolute;
+}
+
+.fourthDiv .fourthRecsFirst .rec:hover > .zoomIn {
+  visibility: visible;
+}
+
+.fourthDiv .fourthRecsSecond {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.fourthDiv .fourthRecsSecond .rec {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 406px;
+  position: relative;
+  cursor: pointer;
+}
+
+.fourthDiv .fourthRecsSecond .rec .zoomIn {
+  width: 100%;
+  height: 406px;
+  position: absolute;
+  background-color: #5abf28;
+  visibility: hidden;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: .8;
+}
+
+.fourthDiv .fourthRecsSecond .rec .zoomIn img {
+  width: 65px;
+  height: 65px;
+}
+
+.fourthDiv .fourthRecsSecond .rec img {
+  width: 100%;
+  height: 406px;
+  position: absolute;
+}
+
+.fourthDiv .fourthRecsSecond .rec:hover > .zoomIn {
+  visibility: visible;
 }
 /*# sourceMappingURL=index.css.map */

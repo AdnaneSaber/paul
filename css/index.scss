@@ -1,6 +1,7 @@
 $pistach : #5abf28;
 $navbargrey:#969696;
 
+
 @font-face {
     font-family: Lobster;
     src: url(../fonts/Lobster-Regular.ttf);
@@ -12,73 +13,37 @@ $navbargrey:#969696;
 }
 
 
-nav {
+
+.open {
+    visibility: visible !important;
+}
+
+.mask {
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: 5;
+}
+
+.zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    visibility: hidden;
+    width: 800px;
+    height: 500px;
     background-color: white;
-
-    .navbar-brand {
-        color: $pistach;
-        font-weight: 400;
-        font-family: 'Lobster';
-        font-size: 25px;
-
-        img {
-            fill: $pistach;
-            color: $pistach;
-
-        }
-    }
-
-    .collapse {
-        .links {
-            .nav-item {
-                color: $pistach;
-
-                .nav-link {
-                    font-family: Montserrat;
-                    text-transform: uppercase;
-                    color: $navbargrey;
-                    font-size: 16px;
-                    font-weight: 300;
-
-                    &:hover {
-                        color: $pistach;
-
-                    }
-                }
-            }
-        }
-
-        .social {
-            li {
-
-                margin: 11px;
-                border-radius: 100%;
-                border: 2px solid;
-                border-color: #e6e6e6;
-                width: 41px;
-                height: 41px;
-
-                .nav-link {
-                    text-align: center;
-                    justify-content: center;
-                    color: $navbargrey;
-                    fill: $navbargrey;
-                    font-size: 14px;
-                }
-
-                &:hover {
-                    border-color: $pistach;
-                    background-color: $pistach;
-
-                    * {
-                        fill: #ffffff;
-                    }
-                }
-
-
-            }
-        }
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 6;
 }
 
 .landingDiv {
@@ -88,7 +53,16 @@ nav {
     background-image: url('../static/planting.png');
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 
+    .landingMask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1;
+        opacity: .1;
+    }
 
 
     .landingImg {
@@ -99,6 +73,7 @@ nav {
         justify-content: center;
 
         .titles {
+            z-index: 2;
             display: grid;
             text-align: center;
 
@@ -108,6 +83,10 @@ nav {
                 font-weight: 400;
                 font-family: "Lobster";
                 text-align: center;
+
+                @media screen and (max-width:900px) {
+                    font-size: 40px;
+                }
             }
 
             h3 {
@@ -115,6 +94,277 @@ nav {
                 color: #ffffff;
                 font-weight: 300;
                 font-family: "Montserrat";
+
+                @media screen and (max-width:900px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.secondDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .secondDiv_img {
+
+        img {
+            min-width: 250px;
+            max-width: 100%;
+        }
+    }
+
+    .secondDiv_txt {
+
+        h1 {
+
+            font-size: 70px;
+            color: #5abf28;
+            font-weight: 400;
+            font-family: "Lobster";
+            padding: 50px;
+
+            @media screen and (max-width:620px) {
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+
+        p {
+            width: 100%;
+            height: 197px;
+
+            &::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #ebebeb;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $pistach;
+            }
+        }
+
+    }
+
+
+}
+
+.thirdDiv {
+    width: 100%;
+    height: 100%;
+    // position: relative;
+
+    .backgroundimg {
+        position: absolute;
+        z-index: -1;
+        opacity: .2;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 70px;
+        color: #5abf28;
+        font-weight: 400;
+        font-family: "Lobster";
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 124px;
+
+        @media screen and (max-width:900px) {
+            font-size: 40px;
+        }
+    }
+
+    .pics_thirdDiv {
+        display: flex;
+        width: 100%;
+        margin: auto;
+
+        .first {
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+
+            h4 {
+                font-size: 24px;
+                color: #636363;
+                font-weight: 300;
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                padding: 55px;
+            }
+
+            button {
+                border-radius: 100%;
+                border: 2px solid #b4b4b4;
+                width: 50px;
+                height: 50px;
+                color: #b4b4b4;
+                background-color: transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                h4 {
+                    color: #5abf28;
+                }
+
+                button {
+                    color: #5abf28;
+                    border-color: #5abf28;
+                }
+            }
+        }
+
+        .second {
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+
+            h4 {
+                font-size: 24px;
+                color: #636363;
+                font-weight: 300;
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                padding: 55px;
+            }
+
+            button {
+                border-radius: 100%;
+                border: 2px solid #b4b4b4;
+                width: 50px;
+                height: 50px;
+                color: #b4b4b4;
+                background-color: transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                h4 {
+                    color: #5abf28;
+                }
+
+                button {
+                    color: #5abf28;
+                    border-color: #5abf28;
+                }
+            }
+        }
+    }
+}
+
+.fourthDiv {
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        font-size: 70px;
+        color: #5abf28;
+        font-weight: 400;
+        font-family: "Lobster";
+        text-align: center;
+        padding: 50px;
+
+        @media screen and (max-width:900px) {
+            font-size: 40px;
+        }
+    }
+
+    .fourthRecsFirst {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        position: relative;
+
+        .rec {
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            height: 406px;
+            position: relative;
+            cursor: pointer;
+
+            .zoomIn {
+                width: 100%;
+                height: 406px;
+                position: absolute;
+                background-color: #5abf28;
+                visibility: hidden;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: .8;
+
+                img {
+                    margin: auto;
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 406px;
+                position: absolute;
+            }
+
+            &:hover>.zoomIn {
+                visibility: visible;
+            }
+        }
+    }
+
+    .fourthRecsSecond {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: relative;
+
+        .rec {
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            height: 406px;
+            position: relative;
+            cursor: pointer;
+
+            .zoomIn {
+                width: 100%;
+                height: 406px;
+                position: absolute;
+                background-color: #5abf28;
+                visibility: hidden;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: .8;
+
+                img {
+
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 406px;
+                position: absolute;
+            }
+
+            &:hover>.zoomIn {
+                visibility: visible;
             }
         }
     }
