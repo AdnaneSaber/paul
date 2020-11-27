@@ -125,6 +125,7 @@ $navbargrey:#969696;
             font-weight: 400;
             font-family: "Lobster";
             padding: 50px;
+            white-space: nowrap;
 
             @media screen and (max-width:620px) {
                 text-align: center;

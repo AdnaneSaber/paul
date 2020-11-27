@@ -17,3 +17,15 @@ $(".rec").on("click", function () {
       $("body").css("overflow", "visible");
     });
 });
+let count = 0;
+const bgs = ["first.png", "second.png", "third.png"];
+// window.setInterval(function () {
+//   console.log(count);
+
+//   if (count >= bgs.length) {
+//     count = 0;
+//   } else {
+//     count++;
+//   }
+//   console.log(bgs[count]);
+// }, 1000);
