@@ -1,4 +1,5 @@
 $(".rec").on("click", function () {
+  // this is
   let img = $(this).children("img").attr("src");
   $("body").css("overflow", "hidden");
   $(".zoomed")
@@ -18,14 +19,37 @@ $(".rec").on("click", function () {
     });
 });
 let count = 0;
-const bgs = ["first.png", "second.png", "third.png"];
-// window.setInterval(function () {
-//   console.log(count);
+const bgs = [
+  "landingFirstbg.png",
+  "landingSecondbg.png",
+  "landingThirdbg.png",
+  "planting.png",
+];
 
-//   if (count >= bgs.length) {
-//     count = 0;
-//   } else {
-//     count++;
-//   }
-//   console.log(bgs[count]);
-// }, 1000);
+var timer = $.timer(
+  function () {
+    $("#landingDiv").css({ backgroundImage: `url(static/${bgs[count]})` });
+
+    if (count === bgs.length - 1) {
+      count = 0;
+    } else {
+      count++;
+    }
+  },
+  2000,
+  true
+);
+timer.pause();
+$("#toggler").popover({ trigger: "hover" });
+$("#toggler").on("click", function () {
+  console.log($(this).html());
+  if ($(this).html() === "On") {
+    $(this).css({ backgroundColor: "#dc3545" });
+    $(this).html("Off");
+    timer.play();
+  } else {
+    $(this).html("On");
+    $(this).css({ backgroundColor: "#5abf28" });
+    timer.pause();
+  }
+});
